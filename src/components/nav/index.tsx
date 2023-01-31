@@ -38,22 +38,22 @@ const NavBar = ({ internal }: navProps) => {
 
   const navigation = (
     <>
-      <Link className="nav-link" to="/ep-test/">
+      <Link className="nav-link" to="/">
         Home
       </Link>
-      <Link className="nav-link" to="/ep-test/team">
+      <Link className="nav-link" to="/team">
         The Team
       </Link>
-      <Link className="nav-link" to="/ep-test/consulting">
+      <Link className="nav-link" to="/consulting">
         Consulting
       </Link>
-      <Link className="nav-link" to="/ep-test/services">
+      <Link className="nav-link" to="/services">
         Services
       </Link>
-      <Link className="nav-link" to="/ep-test/the-point">
+      <Link className="nav-link" to="/the-point">
         The Point
       </Link>
-      <Link className="nav-link" to="/ep-test/contact">
+      <Link className="nav-link" to="/contact">
         Contact
       </Link>
     </>
