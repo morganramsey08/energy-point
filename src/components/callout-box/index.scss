@@ -1,0 +1,89 @@
+@import "../../styles/mixins.scss";
+
+.callout-box {
+  margin: 100px auto;
+  padding: 100px 85px;
+  width: 100%;
+
+  @include for-phone-only {
+    padding: 20px;
+  }
+
+  .wrapper {
+    align-items: center;
+    background-color: $brand-blue;
+    border-radius: 15px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding: 65px 55px;
+
+    @include for-phone-only {
+      flex-direction: column;
+      padding: 20px 20px 40px;
+    }
+
+    @include for-desktop-up {
+      width: 100%;
+    }
+
+    @include for-big-desktop-up {
+      max-width: 1500px;
+    }
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @include for-phone-only {
+        order: 2;
+        justify-content: center;
+        align-items: center;
+      }
+
+      h2 {
+        font-family: "proxima_nova_extrabold";
+        font-size: 3.9rem;
+        color: white;
+        max-width: 570px;
+
+        @include for-phone-only {
+          font-size: 2.5rem;
+          text-align: center;
+        }
+      }
+
+      p {
+        color: white;
+        font-size: 1.275rem;
+        line-height: 1.3;
+        margin: 25px 0;
+        max-width: 600px;
+        @include for-phone-only {
+          text-align: center;
+        }
+      }
+    }
+
+    .right {
+      position: relative;
+      width: 100%;
+
+      @include for-phone-only {
+        order: 1;
+      }
+
+      img {
+        position: absolute;
+        top: calc(-50% - 265px);
+        width: 620px;
+
+        @include for-phone-only {
+          position: relative;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

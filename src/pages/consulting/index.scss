@@ -1,0 +1,63 @@
+@import "../../styles/mixins.scss";
+
+.consulting-page {
+  .blurb-wrapper {
+    margin: 180px auto 50px;
+    @include for-phone-only {
+      margin: 10px auto 80px;
+    }
+
+    &.blurbClass {
+      margin: 80px auto 50px;
+    }
+  }
+
+  p,
+  ul {
+    margin: 20px auto;
+    max-width: 900px;
+  }
+
+  .boxes {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+    margin: 64px auto;
+
+    @include for-phone-only {
+      width: 100%;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .box {
+      align-items: flex-start;
+      box-shadow: rgb(35 38 47 / 10%) 0px 30px 40px -30px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      border-radius: 8px;
+      padding: 32px;
+      background-color: $snow-grey;
+      font-size: 0.875rem;
+      line-height: 1.2;
+
+      span {
+        font-family: "proxima_nova_bold";
+        color: $midnight-80;
+        font-size: 1rem;
+        height: 40px;
+      }
+
+      .icon-wrapper {
+        background-color: $brand-blue;
+        padding: 10px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: rgb(35 119 252 / 30%) 0px 10px 20px;
+      }
+    }
+  }
+}

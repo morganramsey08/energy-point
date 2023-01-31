@@ -1,0 +1,83 @@
+@import "../../styles/mixins.scss";
+
+.team-page {
+  h1 {
+    color: $brand-blue;
+    margin: 160px auto 20px;
+    max-width: 750px;
+    text-align: center;
+
+    @include for-phone-only {
+      font-size: 2.5rem;
+      margin-top: 40px;
+    }
+  }
+  .subtext {
+    color: $midnight;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 auto;
+    max-width: 770px;
+    text-align: center;
+
+    @include for-phone-only {
+      font-size: 1.2rem;
+    }
+  }
+
+  .team-member {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 100px 0;
+
+    @include for-phone-only {
+      flex-direction: column;
+    }
+
+    .bio-pic {
+      img {
+        border-radius: 15px;
+        max-width: 450px;
+        @include for-phone-only {
+          width: 100%;
+        }
+      }
+    }
+
+    .copy {
+      margin-left: 40px;
+
+      @include for-phone-only {
+        margin-left: 0;
+      }
+
+      span {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .name {
+        color: $brand-blue;
+        font-size: 2.2rem;
+        font-family: "proxima_nova_extrabold";
+        margin-top: 10px;
+      }
+
+      .title {
+        color: $orange;
+        font-size: 1.5rem;
+        font-family: "proxima_nova_bold";
+      }
+
+      .bio {
+        color: $midnight;
+        font-size: 1.2rem;
+        line-height: 1.3;
+        margin-top: 10px;
+        max-width: 800px;
+      }
+    }
+  }
+}

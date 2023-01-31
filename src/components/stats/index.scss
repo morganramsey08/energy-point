@@ -1,0 +1,44 @@
+@import "../../styles/mixins.scss";
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 70px;
+  width: 100%;
+
+  @include for-phone-only {
+    padding: 0px 30px;
+    flex-wrap: wrap;
+  }
+  @include for-desktop-up {
+    max-width: 100%;
+  }
+
+  @include for-big-desktop-up {
+    max-width: 1600px;
+  }
+
+  .stat {
+    font-size: 2.6rem;
+    @include for-phone-only {
+      flex: 50%;
+      padding: 0 20px;
+      margin: 0 0 20px;
+    }
+    div {
+      &:first-of-type {
+        color: $brand-blue;
+        font-family: "proxima_nova_bold";
+        font-size: 2.6rem;
+      }
+
+      &:last-of-type {
+        font-size: 1.2rem;
+        @include for-phone-only {
+          font-size: 1rem;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+}

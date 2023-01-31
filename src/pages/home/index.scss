@@ -1,0 +1,12 @@
+@import "../../styles/mixins.scss";
+
+.home-page {
+  overflow-x: hidden;
+
+  .stats {
+    margin: 195px auto 0;
+    @include for-phone-only {
+      margin: 120px auto 40px;
+    }
+  }
+}

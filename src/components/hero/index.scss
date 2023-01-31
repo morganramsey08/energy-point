@@ -1,0 +1,66 @@
+@import "../../styles/mixins.scss";
+
+.hero-wrapper {
+  position: relative;
+  .hero-bg {
+    background-image: url("./img/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    height: 800px;
+    position: absolute;
+    width: 100%;
+    z-index: 0;
+    @include for-phone-only {
+      height: 600px;
+    }
+  }
+  .scrim {
+    height: 800px;
+    background-color: rgba($midnight, 0.2);
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    @include for-phone-only {
+      background-color: rgba($midnight, 0.5);
+      height: 600px;
+    }
+  }
+
+  .content-container {
+    color: white;
+    padding: 260px 90px 0;
+    position: relative;
+    z-index: 2;
+
+    @include for-phone-only {
+      padding: 130px 30px 0;
+    }
+
+    h1 {
+      font-size: 4.6rem;
+      margin-bottom: 20px;
+      max-width: 600px;
+      font-family: "proxima_nova_extrabold";
+
+      @include for-phone-only {
+        font-size: 3.2rem;
+      }
+    }
+
+    p {
+      margin-bottom: 30px;
+      max-width: 570px;
+      line-height: 1.6;
+      font-size: 1.2rem;
+    }
+
+    @include for-desktop-up {
+      max-width: 100%;
+    }
+
+    @include for-big-desktop-up {
+      max-width: 1600px;
+    }
+  }
+}

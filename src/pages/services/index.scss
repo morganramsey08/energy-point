@@ -1,0 +1,150 @@
+@import "../../styles/mixins.scss";
+
+.services-page {
+  .blurb-wrapper {
+    margin: 180px auto 50px;
+    h2 {
+      margin: 0 auto 20px;
+      max-width: 500px;
+    }
+    @include for-phone-only {
+      margin: 10px auto 80px;
+    }
+  }
+
+  .tabs {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .tab-switch {
+      display: inline-flex;
+      margin: 0 auto 30px;
+      background-color: $snow-grey;
+      padding: 10px;
+      border-radius: 50px;
+
+      @include for-phone-only {
+        margin: 0 auto;
+      }
+
+      li {
+        background-color: white;
+        border-radius: 50px;
+        color: $midnight-80;
+        cursor: pointer;
+        font-family: "proxima_nova_bold";
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+        margin: 0;
+        padding: 10px 15px;
+        list-style: none;
+        box-shadow: rgb(35 119 252 / 0%) 0px 0 0;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        z-index: 1;
+        border: 1px solid transparent;
+
+        &:hover {
+          background-color: $snow-grey;
+          transform: scale(0.98, 0.98);
+        }
+
+        &::after {
+          border-radius: 50px;
+          content: "";
+          position: absolute;
+          z-index: -1;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          opacity: 0;
+          border-radius: 50px;
+          box-shadow: rgb(35 119 252 / 20%) 0px 10px 10px;
+          transition: opacity 0.3s ease-in-out;
+          top: 0;
+        }
+
+        &.active {
+          background-color: $brand-blue;
+          border: 1px solid white;
+          color: white;
+          transform: scale(1.05, 1.05);
+
+          &::after {
+            opacity: 1;
+          }
+        }
+
+        &:first-of-type {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    h2 {
+      align-self: flex-start;
+      font-size: 3rem;
+      color: $orange;
+      font-family: "proxima_nova_extrabold";
+      margin: 0;
+      grid-column: 1 / -1;
+    }
+
+    .tab-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 64px;
+      margin: 64px auto;
+
+      @include for-phone-only {
+        grid-template-columns: 1fr;
+        margin: 40px auto;
+        gap: 40px;
+      }
+
+      .service {
+        align-items: flex-start;
+        box-shadow: rgb(35 38 47 / 10%) 0px 30px 40px -30px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        border-radius: 8px;
+        padding: 32px;
+        background-color: $snow-grey;
+        font-size: 0.875rem;
+        line-height: 1.2;
+
+        .icon-wrapper {
+          background-color: $orange;
+          padding: 20px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 20px auto 20px;
+          box-shadow: rgba(203, 97, 10, 0.3) 0px 10px 20px;
+
+          img {
+            max-width: 55px;
+            max-height: 55px;
+          }
+        }
+
+        h3 {
+          color: $brand-blue;
+          font-family: "proxima_nova_bold";
+          font-size: 1.2rem;
+          min-height: 50px;
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .callout-box {
+    margin: 0 auto 50px;
+  }
+}

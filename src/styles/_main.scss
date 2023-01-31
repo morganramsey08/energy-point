@@ -1,0 +1,59 @@
+p,
+ul {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+ul {
+  li {
+    list-style-type: disc;
+    margin: 10px 20px;
+  }
+}
+
+h1 {
+  font-size: 4.6rem;
+  font-family: "proxima_nova_extrabold";
+
+  @include for-phone-only {
+    font-size: 3.2rem;
+  }
+}
+
+a {
+  &.button {
+    border-radius: 8px;
+    color: white;
+    display: inline-flex;
+    font-family: "proxima_nova_bold";
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+
+    &.primary {
+      background-color: hsla(219, 82%, 57%, 1);
+    }
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.85);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+    }
+  }
+}
+
+.content-wrapper {
+  margin-top: 80px;
+  padding: 0 80px;
+  @include for-phone-only {
+    padding: 15px 30px;
+  }
+
+  @include for-desktop-up {
+    max-width: 100%;
+  }
+
+  // @include for-big-desktop-up {
+  //   max-width: 1600px;
+  // }
+}

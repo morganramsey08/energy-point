@@ -1,0 +1,25 @@
+@import "../../styles/mixins.scss";
+
+.button-container {
+  .button {
+    background-color: $brand-blue;
+    border-radius: 5px;
+    color: white;
+    padding: 14px 21px;
+    display: inline-flex;
+  }
+
+  &.secondary {
+    .button {
+      background-color: white;
+      color: $brand-blue;
+    }
+  }
+
+  .xlarge {
+    .button {
+      padding: 20px 27px;
+      font-size: 1.2rem;
+    }
+  }
+}

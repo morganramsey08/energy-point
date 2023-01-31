@@ -1,0 +1,171 @@
+@import "../../styles/mixins.scss";
+
+.nav-wrapper {
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  transition: top 0.6s;
+  z-index: 3;
+  transition: all 0.3s ease;
+  width: 100%;
+
+  &.hidden {
+    top: -78px;
+  }
+
+  &.solid-bg,
+  &.internal-page {
+    background-color: white;
+    border-bottom: 1px solid $grey-62;
+    .nav-container {
+      nav {
+        a {
+          color: $midnight;
+          &:last-of-type {
+            color: white;
+            background-color: $brand-blue;
+            border-color: $brand-blue;
+          }
+        }
+      }
+    }
+
+    .bm-burger-bars {
+      background: $brand-blue;
+    }
+  }
+
+  .nav-container {
+    align-items: center;
+    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    padding: 15px 40px;
+    margin: 0 auto;
+
+    @include for-phone-only {
+      padding: 15px 30px;
+    }
+
+    @include for-desktop-up {
+      max-width: 100%;
+    }
+
+    @include for-big-desktop-up {
+      max-width: 1600px;
+    }
+
+    .logo {
+      img {
+        width: 140px;
+      }
+    }
+  }
+
+  nav {
+    align-items: center;
+    display: inline-flex;
+    margin-left: auto;
+
+    @include for-phone-only {
+      display: flex;
+      flex-direction: column;
+      margin: 60px auto;
+      align-items: flex-end;
+    }
+
+    a {
+      color: white;
+      font-family: "proxima_nova_bold";
+      font-size: 1rem;
+      letter-spacing: 0.04rem;
+      margin: 0 20px;
+      text-decoration: none;
+      transition: all 0.2s ease-in;
+
+      &:last-of-type {
+        border: 2px solid white;
+        border-radius: 10px;
+        font-size: 0.875rem;
+        font-weight: 700;
+        padding: 10px 25px;
+      }
+
+      &:hover {
+        opacity: 0.6;
+        transform: translateY(-2px);
+      }
+
+      @include for-phone-only {
+        margin: 15px 11px;
+        font-size: 1.5rem;
+      }
+
+      @include for-tablet-landscape-up {
+        margin: 0 30px;
+      }
+    }
+  }
+}
+
+#page-wrap {
+  text-align: center;
+  overflow: auto;
+}
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  right: 30px;
+  top: 20px;
+}
+
+.bm-item {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+.bm-item:hover {
+  color: white;
+}
+
+.bm-burger-bars {
+  background: white;
+}
+
+.bm-cross {
+  min-width: 5px;
+  min-height: 40px;
+  background: white;
+  right: 5px;
+  top: 0px;
+}
+
+.bm-cross-button {
+  min-width: 40px;
+  min-height: 40px;
+  right: 35px !important;
+  top: 30px !important;
+}
+
+.bm-menu {
+  background: rgba($brand-blue, 0.9);
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: white;
+}
+
+.bm-item-list {
+  color: #b8b7ad;
+  overflow-y: hidden;
+}
+
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
